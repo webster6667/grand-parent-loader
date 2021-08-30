@@ -1,6 +1,6 @@
 {
   "name": "grand-parent-loader",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "grand-parent-loader loader",
   "main": "grand-parent-loader.js",
   "scripts": {
