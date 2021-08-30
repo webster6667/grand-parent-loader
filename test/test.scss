@@ -1,0 +1,109 @@
+.site-nav {
+  .fade-layout(rgba(33, 34, 38, .7), fixed);
+  .fade-out();
+  z-index: 9999;
+
+  //Выезжающий блок с навигацией
+  &__bar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 530px;
+    padding-top: 126px;
+
+    background-color: rgba(33, 34, 38, 1);
+
+    transform: translateX(-100%);
+  }
+
+  //Кнопка закрытия меню
+  &__close-btn {
+    position: absolute;
+    right: 23px;
+    top: 45px;
+
+    padding-right: 45px;
+
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    cursor: pointer;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 1px;
+      right: 5px;
+
+      border-radius: 1px;
+      background-color: white;
+    }
+
+    &:before {
+      .transform-center(y, rotate(45deg));
+    }
+
+    &:after {
+      .transform-center(y, rotate(-45deg));
+    }
+
+  }
+
+  //Список ссылок
+  &__link-list {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+
+    padding-left: 117px;
+  }
+
+  //Каждая отдельная ссылка
+  &__link {
+    text-align: left;
+    color: white;
+
+    font-size: 28px;
+    line-height: 38px;
+    font-weight: 300;
+  }
+
+  //Полоса активной ссылки
+  &__active-link-line {
+    position: absolute;
+    left: 0;
+
+    width: 45px;
+    height: 38px;
+
+    transition: transform 0.3s 0s ease;
+
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+
+      height: 1px;
+
+      background-color: white;
+    }
+
+  }
+
+  &_is-open {
+    .fade-in();
+
+    ^&__bar {
+      transform: translateX(0%);
+    }
+
+  }
+
+}

@@ -1,0 +1,19 @@
+{
+  "name": "grand-parent-loader",
+  "version": "0.0.1",
+  "description": "grand-parent-loader loader",
+  "main": "grand-parent-loader.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webster6667/grand-parent-loader.git"
+  },
+  "keywords": ["loaders", "grand-parent-loader", "grand-parent", "sass", "less"],
+  "author": "webster6667",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webster6667/grand-parent-loader/issues"
+  }
+}
